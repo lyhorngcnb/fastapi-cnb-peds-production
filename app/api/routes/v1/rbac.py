@@ -1,8 +1,8 @@
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status, Form
 from sqlalchemy.orm import Session
-from app.core.rbac_service import RBACService
-from app.core.rbac_middleware import (
+from app.services.rbac_service import RBACService
+from app.services.rbac_middleware import (
     require_admin, require_edit_users, require_read_users,
     require_edit_roles, require_read_roles,
     get_current_user_with_permissions
@@ -14,7 +14,7 @@ from app.domain.rbac_schemas import (
     PermissionCreate, PermissionResponse, PermissionUpdate,
     PermissionCheck, PermissionCheckResponse
 )
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 
 router = APIRouter(prefix="/rbac", tags=["RBAC Management"])
 

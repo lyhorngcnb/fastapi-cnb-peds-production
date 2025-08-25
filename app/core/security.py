@@ -6,7 +6,7 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 from app.domain.rbac_models import User
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 
 # Security configuration
 SECRET_KEY = "your-secret-key-here"  # Change this in production!

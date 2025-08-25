@@ -17,13 +17,12 @@ app/
 │   ├── config.py         # Configuration management
 │   ├── dependencies.py   # FastAPI dependencies
 │   ├── exceptions.py     # Custom exception classes
+│   └── database.py      # Database configuration
 │   └── middleware.py     # Custom middleware
 ├── domain/               # Domain Layer (Business Models)
 │   ├── customer.py       # Customer domain model
 │   ├── loan_request.py   # Loan request model
 │   └── ...               # Other domain models
-├── infrastructure/       # Infrastructure Layer
-│   └── database.py      # Database configuration
 ├── repositories/         # Data Access Layer
 │   ├── base.py          # Base repository
 │   └── customer_repository.py # Customer-specific operations

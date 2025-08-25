@@ -2,7 +2,7 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.core.database import get_db
-from app.core.loan_request_service import LoanRequestService
+from app.services.loan_request_service import LoanRequestService
 from app.domain.loan_request_schemas import (
     LoanRequestCreate, 
     LoanRequestUpdate, 
@@ -184,29 +184,29 @@ def get_loan_request_statistics(
     """
     return LoanRequestService.get_loan_request_statistics(db)
 
-@router.get("/enums/branches")
-def get_branch_enums(db: Session = Depends(get_db)):
-    """
-    Get available branch options.
-    """
-    from app.domain.reference_models import Branch
-    branches = db.query(Branch).filter(Branch.is_active == True).all()
-    return [{"id": branch.id, "code": branch.code, "name": branch.name, "description": branch.description} for branch in branches]
+# @router.get("/enums/branches")
+# def get_branch_enums(db: Session = Depends(get_db)):
+#     """
+#     Get available branch options.
+#     """
+#     from app.domain.reference_models import Branch
+#     branches = db.query(Branch).filter(Branch.is_active == True).all()
+#     return [{"id": branch.id, "code": branch.code, "name": branch.name, "description": branch.description} for branch in branches]
 
-@router.get("/enums/loan-types")
-def get_loan_type_enums(db: Session = Depends(get_db)):
-    """
-    Get available loan type options.
-    """
-    from app.domain.reference_models import LoanType
-    loan_types = db.query(LoanType).filter(LoanType.is_active == True).all()
-    return [{"id": loan_type.id, "code": loan_type.code, "name": loan_type.name, "description": loan_type.description} for loan_type in loan_types]
+# @router.get("/enums/loan-types")
+# def get_loan_type_enums(db: Session = Depends(get_db)):
+#     """
+#     Get available loan type options.
+#     """
+#     from app.domain.reference_models import LoanType
+#     loan_types = db.query(LoanType).filter(LoanType.is_active == True).all()
+#     return [{"id": loan_type.id, "code": loan_type.code, "name": loan_type.name, "description": loan_type.description} for loan_type in loan_types]
 
-@router.get("/enums/request-types")
-def get_request_type_enums(db: Session = Depends(get_db)):
-    """
-    Get available request type options.
-    """
-    from app.domain.reference_models import RequestType
-    request_types = db.query(RequestType).filter(RequestType.is_active == True).all()
-    return [{"id": request_type.id, "code": request_type.code, "name": request_type.name, "description": request_type.description} for request_type in request_types] 
+# @router.get("/enums/request-types")
+# def get_request_type_enums(db: Session = Depends(get_db)):
+#     """
+#     Get available request type options.
+#     """
+#     from app.domain.reference_models import RequestType
+#     request_types = db.query(RequestType).filter(RequestType.is_active == True).all()
+#     return [{"id": request_type.id, "code": request_type.code, "name": request_type.name, "description": request_type.description} for request_type in request_types] 

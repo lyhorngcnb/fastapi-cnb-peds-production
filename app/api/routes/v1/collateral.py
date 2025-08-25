@@ -4,13 +4,13 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 from fastapi import Body
-from app.core.rbac_middleware import (
+from app.services.rbac_middleware import (
     require_read_collateral, require_edit_collateral, 
     require_clear_collateral, require_authorize_collateral,
     require_comment_collateral, require_collateral_access
 )
 from app.domain.rbac_models import User
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 
 router = APIRouter(prefix="/collateral", tags=["Property Evaluation"])
 

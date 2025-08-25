@@ -9,7 +9,7 @@ from app.core.security import (
 )
 from app.domain.rbac_schemas import UserCreate, UserResponse, Token, UserLogin, UserUpdate
 from app.domain.rbac_models import User
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 from app.core.security import verify_password 
 
 router = APIRouter(prefix="/auth", tags=["authentication"])
@@ -19,7 +19,7 @@ def register(
     user_data: UserCreate,
     db: Session = Depends(get_db)
 ):
-    from app.core.rbac_service import RBACService
+    from app.services.rbac_service import RBACService
     rbac_service = RBACService(db)
     return rbac_service.create_user(user_data)
 
@@ -57,7 +57,7 @@ def update_profile(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    from app.core.rbac_service import RBACService
+    from app.services.rbac_service import RBACService
     rbac_service = RBACService(db)
     return rbac_service.update_user(current_user.id, user_data.dict(exclude_unset=True))
 
@@ -66,7 +66,7 @@ def delete_profile(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    from app.core.rbac_service import RBACService
+    from app.services.rbac_service import RBACService
     rbac_service = RBACService(db)
     rbac_service.delete_user(current_user.id)
     return None 
