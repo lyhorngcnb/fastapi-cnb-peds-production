@@ -1,8 +1,8 @@
 from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Query, Form
 from sqlalchemy.orm import Session
-from app.core.database import get_db
-from app.core.customer_service import CustomerService
+from app.infrastructure.database import get_db
+from app.services.customer_service import CustomerService
 from app.domain.customer_schemas import (
 	CustomerCreate, 
 	CustomerUpdate, 
