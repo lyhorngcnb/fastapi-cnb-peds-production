@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app.services.base import BaseService
 from app.repositories.branch_repository import BranchRepository
 from app.domain.reference_models import Branch
-from app.schemas.branch import BranchCreate, BranchUpdate, BranchResponse, BranchListResponse
+from app.domain.branch_model import BranchCreate, BranchUpdate, BranchResponse, BranchListResponse
 from app.core.exceptions import ValidationException, ConflictException, NotFoundException
 
 class BranchService(BaseService[Branch, BranchCreate, BranchUpdate]):

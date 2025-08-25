@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, and_
 from app.repositories.base import BaseRepository
 from app.domain.reference_models import LoanType
-from app.schemas.loan_type import LoanTypeCreate, LoanTypeUpdate
+from app.domain.loan_type import LoanTypeCreate, LoanTypeUpdate
 
 class LoanTypeRepository(BaseRepository[LoanType, LoanTypeCreate, LoanTypeUpdate]):
     """Repository for LoanType operations."""

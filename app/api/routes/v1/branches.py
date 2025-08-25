@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 from app.core.database import get_db
 from app.core.dependencies import get_current_user
 from app.domain.rbac_models import User
-from app.schemas.branch import BranchCreate, BranchUpdate, BranchResponse, BranchListResponse
+from app.domain.branch_model import BranchCreate, BranchUpdate, BranchResponse, BranchListResponse
 from app.services.branch_service import BranchService
-from app.schemas.base import MessageResponseSchema
+from app.domain.base import MessageResponseSchema
 
 router = APIRouter(prefix="/branches", tags=["branches"])
 

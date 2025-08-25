@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 from app.core.database import get_db
 from app.core.dependencies import get_current_user
 from app.domain.rbac_models import User
-from app.schemas.loan_type import LoanTypeCreate, LoanTypeUpdate, LoanTypeResponse, LoanTypeListResponse
+from app.domain.loan_type import LoanTypeCreate, LoanTypeUpdate, LoanTypeResponse, LoanTypeListResponse
 from app.services.loan_type_service import LoanTypeService
-from app.schemas.base import MessageResponseSchema
+from app.domain.base import MessageResponseSchema
 
 router = APIRouter(prefix="/loan-types", tags=["loan-types"])
 

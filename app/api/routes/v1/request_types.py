@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 from app.core.database import get_db
 from app.core.dependencies import get_current_user
 from app.domain.rbac_models import User
-from app.schemas.request_type import RequestTypeCreate, RequestTypeUpdate, RequestTypeResponse, RequestTypeListResponse
+from app.domain.request_type_model import RequestTypeCreate, RequestTypeUpdate, RequestTypeResponse, RequestTypeListResponse
 from app.services.request_type_service import RequestTypeService
-from app.schemas.base import MessageResponseSchema
+from app.domain.base import MessageResponseSchema
 
 router = APIRouter(prefix="/request-types", tags=["request-types"])
 

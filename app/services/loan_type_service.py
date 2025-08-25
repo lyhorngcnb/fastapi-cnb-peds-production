@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app.services.base import BaseService
 from app.repositories.loan_type_repository import LoanTypeRepository
 from app.domain.reference_models import LoanType
-from app.schemas.loan_type import LoanTypeCreate, LoanTypeUpdate, LoanTypeResponse, LoanTypeListResponse
+from app.domain.loan_type import LoanTypeCreate, LoanTypeUpdate, LoanTypeResponse, LoanTypeListResponse
 from app.core.exceptions import ValidationException, ConflictException, NotFoundException
 
 class LoanTypeService(BaseService[LoanType, LoanTypeCreate, LoanTypeUpdate]):

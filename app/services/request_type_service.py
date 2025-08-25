@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app.services.base import BaseService
 from app.repositories.request_type_repository import RequestTypeRepository
 from app.domain.reference_models import RequestType
-from app.schemas.request_type import RequestTypeCreate, RequestTypeUpdate, RequestTypeResponse, RequestTypeListResponse
+from app.domain.request_type_model import RequestTypeCreate, RequestTypeUpdate, RequestTypeResponse, RequestTypeListResponse
 from app.core.exceptions import ValidationException, ConflictException, NotFoundException
 
 class RequestTypeService(BaseService[RequestType, RequestTypeCreate, RequestTypeUpdate]):

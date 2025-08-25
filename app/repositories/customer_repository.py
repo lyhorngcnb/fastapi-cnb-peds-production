@@ -4,7 +4,7 @@ from sqlalchemy import or_
 
 from app.repositories.base import BaseRepository
 from app.domain.customer import Customer
-from app.schemas.customer import CustomerCreateSchema, CustomerUpdateSchema
+from app.domain.customer import CustomerCreateSchema, CustomerUpdateSchema
 
 class CustomerRepository(BaseRepository[Customer, CustomerCreateSchema, CustomerUpdateSchema]):
     """Customer repository with customer-specific operations."""
