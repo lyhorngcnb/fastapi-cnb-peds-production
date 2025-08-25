@@ -4,7 +4,7 @@ from sqlalchemy import and_, or_
 
 from app.services.base import BaseService
 from app.domain.collateral import Collateral
-from app.schemas.collateral import CollateralCreateSchema, CollateralUpdateSchema
+from app.domain.collateral import CollateralCreateSchema, CollateralUpdateSchema
 from app.core.exceptions import NotFoundException, ValidationException
 
 class CollateralService(BaseService[Collateral, CollateralCreateSchema, CollateralUpdateSchema]):

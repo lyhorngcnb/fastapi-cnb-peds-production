@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, and_
 from app.repositories.base import BaseRepository
 from app.domain.reference_models import RequestType
-from app.schemas.request_type import RequestTypeCreate, RequestTypeUpdate
+from app.domain.request_type_model import RequestTypeCreate, RequestTypeUpdate
 
 class RequestTypeRepository(BaseRepository[RequestType, RequestTypeCreate, RequestTypeUpdate]):
     """Repository for RequestType operations."""

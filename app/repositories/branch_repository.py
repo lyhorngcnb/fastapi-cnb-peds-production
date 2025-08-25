@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_, and_
 from app.repositories.base import BaseRepository
 from app.domain.reference_models import Branch
-from app.schemas.branch import BranchCreate, BranchUpdate
+from app.domain.branch_model import BranchCreate, BranchUpdate
 
 class BranchRepository(BaseRepository[Branch, BranchCreate, BranchUpdate]):
     """Repository for Branch operations."""
