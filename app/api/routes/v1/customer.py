@@ -207,7 +207,7 @@ def get_customer_image_url(
 			detail=f"No {image_type} image found for this customer"
 		)
 	
-	from app.core.minio_service import minio_service
+	from app.services.minio_service import minio_service
 	file_url = minio_service.get_file_url(file_name)
 	
 	if not file_url:

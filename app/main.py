@@ -12,7 +12,7 @@ from app.core.middleware import (
 )
 from app.api.routes.v1 import v1_routers
 from app.infrastructure.database import engine
-from app.core.rbac_service import RBACService
+from app.services.rbac_service import RBACService
 
 # Import all models to ensure they're registered with the Base
 from app.domain.rbac_models import Base, User

@@ -5,7 +5,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 from app.core.security import get_current_user
 from app.domain.rbac_models import User
-from app.core.rbac_service import RBACService
+from app.services.rbac_service import RBACService
 from app.infrastructure.database import get_db
 
 security = HTTPBearer()

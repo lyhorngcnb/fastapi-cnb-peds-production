@@ -8,7 +8,7 @@ from app.infrastructure.database import get_db
 from app.core.config import settings
 from app.core.exceptions import UnauthorizedException, ForbiddenException
 from app.domain.rbac_models import User
-from app.core.rbac_service import RBACService
+from app.services.rbac_service import RBACService
 
 # Security scheme
 security = HTTPBearer()

@@ -4,7 +4,7 @@ from sqlalchemy import and_, or_
 from fastapi import HTTPException, UploadFile
 from app.domain.customer import Customer, GenderEnum
 from app.domain.customer_schemas import CustomerCreate, CustomerUpdate, CustomerResponse
-from app.core.minio_service import minio_service
+from app.services.minio_service import minio_service
 import logging
 
 logger = logging.getLogger(__name__)

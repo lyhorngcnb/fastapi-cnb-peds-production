@@ -11,8 +11,8 @@ from app.domain.property_schemas import (
     GoogleMapCreate, GoogleMapUpdate, GoogleMapResponse,
     DocumentCreate, DocumentUpdate, DocumentResponse
 )
-from app.core.property_service import PropertyService
-from app.core.minio_service import MinioService
+from app.services.property_service import PropertyService
+from app.services.minio_service import MinioService
 from app.domain.property_models import Document
 import logging
 

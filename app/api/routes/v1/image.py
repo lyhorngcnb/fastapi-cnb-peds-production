@@ -5,7 +5,7 @@ from datetime import datetime
 from typing import Optional, Dict, Any
 from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from minio.error import S3Error
-from app.core.minio_service import minio_service
+from app.services.minio_service import minio_service
 from app.core.auth import get_current_user
 from app.domain.rbac_models import User
 

@@ -14,13 +14,13 @@ from app.api.routes.v1.branches import router as branches_router
 # List of all v1 routers
 v1_routers = [
     auth_router,
-    customer_router,
-    property_router,
-    loan_request_router,
-    collateral_router,
-    image_router,
     rbac_router,
+    customer_router,
+    loan_request_router,
+    property_router,
+    collateral_router,
     loan_types_router,
     request_types_router,
     branches_router,
+    image_router,
 ] 

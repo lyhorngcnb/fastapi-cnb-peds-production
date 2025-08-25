@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, Field
 from fastapi import Body
-from app.core.rbac_middleware import (
+from app.services.rbac_middleware import (
     require_read_collateral, require_edit_collateral, 
     require_clear_collateral, require_authorize_collateral,
     require_comment_collateral, require_collateral_access
