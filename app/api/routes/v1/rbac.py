@@ -14,7 +14,7 @@ from app.domain.rbac_schemas import (
     PermissionCreate, PermissionResponse, PermissionUpdate,
     PermissionCheck, PermissionCheckResponse
 )
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 
 router = APIRouter(prefix="/rbac", tags=["RBAC Management"])
 

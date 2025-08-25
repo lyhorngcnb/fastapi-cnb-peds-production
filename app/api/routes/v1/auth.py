@@ -9,7 +9,7 @@ from app.core.security import (
 )
 from app.domain.rbac_schemas import UserCreate, UserResponse, Token, UserLogin, UserUpdate
 from app.domain.rbac_models import User
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 from app.core.security import verify_password 
 
 router = APIRouter(prefix="/auth", tags=["authentication"])

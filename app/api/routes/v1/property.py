@@ -1,7 +1,7 @@
 from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile, File, Form
 from sqlalchemy.orm import Session
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 from app.core.auth import get_current_user
 from app.domain.rbac_models import User
 from app.domain.property_schemas import (

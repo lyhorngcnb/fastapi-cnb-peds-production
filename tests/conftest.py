@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import StaticPool
 
 from app.main import app
-from app.infrastructure.database import get_db, Base
+from app.core.database import get_db, Base
 from app.core.config import settings
 from app.domain.rbac_models import User, Role, Permission, UserRole, RolePermission
 from app.domain.customer import Customer

@@ -11,7 +11,7 @@ from app.core.middleware import (
     SecurityHeadersMiddleware
 )
 from app.api.routes.v1 import v1_routers
-from app.infrastructure.database import engine
+from app.core.database import engine
 from app.services.rbac_service import RBACService
 
 # Import all models to ensure they're registered with the Base
@@ -44,7 +44,7 @@ async def lifespan(app: FastAPI):
     
     # Initialize RBAC system
     try:
-        from app.infrastructure.database import SessionLocal
+        from app.core.database import SessionLocal
         db = SessionLocal()
         try:
             rbac_service = RBACService(db)

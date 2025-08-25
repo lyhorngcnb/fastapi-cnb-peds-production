@@ -194,7 +194,7 @@ def test_endpoint_name():
 ```python
 import pytest
 from app.core.your_service import YourService
-from app.infrastructure.database import SessionLocal
+from app.core.database import SessionLocal
 
 def test_service_method():
     """Test service method."""

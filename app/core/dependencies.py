@@ -4,7 +4,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session
 from jose import JWTError, jwt
 
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 from app.core.config import settings
 from app.core.exceptions import UnauthorizedException, ForbiddenException
 from app.domain.rbac_models import User

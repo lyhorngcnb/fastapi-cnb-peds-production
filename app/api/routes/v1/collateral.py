@@ -10,7 +10,7 @@ from app.services.rbac_middleware import (
     require_comment_collateral, require_collateral_access
 )
 from app.domain.rbac_models import User
-from app.infrastructure.database import get_db
+from app.core.database import get_db
 
 router = APIRouter(prefix="/collateral", tags=["Property Evaluation"])
 
